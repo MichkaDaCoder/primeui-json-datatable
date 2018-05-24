@@ -1,0 +1,72 @@
+[
+    {
+        "Fullname": "MichkaDaCoder",
+        "Email": "michkadacoder@mail.com",
+        "Job": "Code Drawer",
+        "Skills": [
+            "C++",
+            "Java",
+            "Python",
+            "Shell",
+            "Grails",
+            "jQuery"
+        ]
+    },
+    {
+        "Fullname": "Jane DOE",
+        "Email": "jane.doe@mail.com",
+        "Job": ".NET Developer",
+        "Skills": [
+            "C++",
+            "C#.NET",
+            "SQL Server",
+            "NUnit"
+        ]
+    },
+    {
+        "Fullname": "John DOE",
+        "Email": "john.doe@mail.com",
+        "Job": "Senior RubyOnRails Developer",
+        "Skills": [
+            "Java",
+            "C++",
+            "AngularJS",
+            "RubyOnRails"
+        ]
+    },
+    {
+        "Fullname": "Steven YOV",
+        "Email": "steven.yov@mail.com",
+        "Job": "iOS Developer",
+        "Skills": [
+            "C++",
+            "ObjectiveC",
+            "NodeJS"
+        ]
+    },
+    
+    {
+        "Fullname": "James LING",
+        "Email": "jamesling@mail.com",
+        "Job": "Senior JS Developer",
+        "Skills": [
+            "JavaScript",
+            "jQuery",
+            "jQueryUI",
+            "ExtJS"
+        ]
+    },
+    
+    {
+        "Fullname": "Tux SMILING",
+        "Email": "tuxsmiling@mail.com",
+        "Job": "Senior Linux Admin",
+        "Skills": [
+            "Shell",
+            "Linux",
+            "iptables",
+            "C++",
+            "Python"
+        ]
+    }
+]

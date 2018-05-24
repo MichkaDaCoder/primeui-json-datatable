@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- primeui-json : v 1.0 by MichkaDaCoder-->
+<!-- bind a PrimeUI Datatable from a JSON file or using a Webservice-->
+<html>
+    <head>
+        <title>primeui-json</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.8.1/jquery-ui.min.js"></script>
+        <script src="primeui-4.1.8/primeui.js"></script>
+        <script src="primeui-4.1.8/primeui-all.js"></script>
+        <script src="primeui-4.1.8/primeelements.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+        <link rel="stylesheet" href="primeui-4.1.8/primeui.css">
+        <link rel="stylesheet" href="primeui-4.1.8/themes/aristo/theme.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css"> 
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.8.1/themes/redmond/jquery-ui.css">
+        <script>
+            $(document).ready(function () {
+                //tableJson
+                $('#tableJson').puidatatable({
+                    caption: 'Employees Table(JSON File)',
+                    emptyMessage: "No Data",
+                    selectionMode: "single",
+                    responsive: true,
+                    resizableColumns: true,
+                    columns: [
+                        {field: 'Fullname', headerText: 'Fullname', filter: true},
+                        {field: 'Email', headerText: 'Email', filter: true},
+                        {field: 'Job', headerText: 'Job', filter: true},
+                        {field: 'Skills', headerText: 'Skills', filter: true}
+                    ],
+                    datasource: function (callback) {
+                        $.ajax({
+                            type: "GET",
+                            url: 'employees.json',
+                            dataType: "json",
+                            context: this,
+                            //isLocal: true,
+                            success: function (response) {
+                                callback.call(this, response);
+                                //$("#tableJson").html(response);
+                            },
+                            error: function (response) {
+                                swal("Oops", "Something went wrong!" + response, "error");
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <form>
+            <div id="tableJson"></div><br>
+        </form>
+    </body>
+</html>
